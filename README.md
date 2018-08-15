@@ -2,7 +2,7 @@
 
 ## The problem
 
-AWS Route 53 private hosted zones enable you to have private DNS names which only resolve from your VPC. This is great
+AWS Route 53 [private hosted zones](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-private.html) enable you to have private DNS names which only resolve from your VPC. This is great
 when working from EC2 instances since everything is setup and ready to go. This however becomes a problem when using
 docker containers on a systemd system. On such a system, `systemd-resolved` sits in between your host applications
 and name resolution. The entry in `/etc/resolv.conf` is basically, `127.0.0.53` which doesn't mean much when you want
