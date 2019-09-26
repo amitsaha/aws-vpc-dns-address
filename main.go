@@ -49,5 +49,5 @@ func main() {
 	dnsUint := ipv4Uint + 2
 	buff := make(net.IP, 4)
 	binary.BigEndian.PutUint32(buff, dnsUint)
-	fmt.Printf("%v\n", net.IP(buff))
+	fmt.Printf("%v\n", buff)
 }
